@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href=" https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.7.1/jasmine.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.7.1/jasmine.min.js"></script>
+       <script src=" https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.7.1/jasmine-html.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.7.1/boot.min.js"></script>
+    <title>Personalized Navbar</title>
+</head>
+
+<body>
+<label class="switch__label"> change mode
+<input class="switch__input" type="checkbox" name="mode">
+<span class="switch"></span> 
+</label>
+
+    <div class="modal">
+        <button class="close-modal">
+        <span class="material-icons"> close </span>
+      </button>
+        <div class="modal-content">
+            <input class="modal-title" type="text" placeholder="Title" />
+            <input class="modal-text" type="text" placeholder="Take a note" />
+        </div>
+    </div>
+    <header>
+        <img class="header-logo" src="https://www.gstatic.com/images/branding/product/1x/keep_48dp.png" />
+        <h2 class="header-title">Keep</h2>
+    </header>
+    <main>
+        <div class="container">
+            <form id="form" autocomplete="off">
+                <input class="item" id="note-title" name="title" type="text" placeholder="Take a Note." />
+                <input class="item" id="note-text" name="note" type="text" placeholder="Take a Note..." />
+                <div id="form-buttons">
+                    <button type="submit" class="add-btn">
+              <span class="material-icons"> done </span>
+            </button>
+                    <button type="button" id="form-close-button" class="close">
+              <span class="material-icons"> close </span>
+            </button>
+                </div>
+            </form>
+        </div>
+        <div id="notes" class="items"></div>
+
+        <div class="color-tooltip">
+            <div class="color-option" data-color="#3c3f43" id="gray"></div>
+            <div class="color-option" data-color="#fbbc04" id="orange"></div>
+            <div class="color-option" data-color="#90ee90" id="green"></div>
+        </div>
+    </main>
+</body>
+
+</html>
