@@ -1,0 +1,36 @@
+.newItemEntry {
+    width: 80%;
+    max-width: 1040px;
+    margin: auto;
+    padding: 20px;
+    form {
+        display: flex;
+        justify-content: center;
+    }
+    #note-text {
+        display: none;
+    }
+    label {
+        position: absolute;
+        left: -1000000px;
+    }
+    input[type="text"] {
+        font-size: 1.25rem;
+        border: 2px solid $text-borderColor;
+        border-radius: 10px;
+        padding: 0.75rem;
+        outline: none;
+        margin: 0.2rem;
+    }
+    input[type="text"]:focus,
+    input[type="text"]:hover {
+        box-shadow: 4px 2px 5px #000;
+    }
+    button {
+        font-size: 1.25rem;
+        padding: 0.75rem;
+        @include mp(768px) {
+            font-size: 1.5rem;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+$bg-color: #4a90e2;
+$default-font-color:#000;
+$container-border-color:#000;
+$btn-color: #aa2525;
+$grey: #e7e7e7;
+$gray: grey;
+$blue: #0072B9;
+$pink: #D60087;
+$yellow: #ffc600;
+$black: #2e2e2e;
+$red: #c73737;
+$green: #61e846;
+$text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+$box-shadow: 0 0 5px 5px rgba(88, 86, 86, 0.2);
+$button-textColor :#fff;
+$button-hoverColor:#000;
+$line-height: 1.5;
+$text-borderColor:lightgray;
+$dropshadow-color: gray;
+$background-image: url("data:image/svg+xml,%3Csvg width='20' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 21.184c.13.357.264.72.402 1.088l.661 1.768C4.653 33.64 6 39.647 6 50c0 10.271-1.222 15.362-4.928 24.629-.383.955-.74 1.869-1.072 2.75v6.225c.73-2.51 1.691-5.139 2.928-8.233C6.722 65.888 8 60.562 8 50c0-10.626-1.397-16.855-5.063-26.66l-.662-1.767C1.352 19.098.601 16.913 0 14.85v6.335zm20 0C17.108 13.258 16 8.077 16 0h2c0 5.744.574 9.951 2 14.85v6.334zm0 56.195c-2.966 7.86-4 13.123-4 22.621h2c0-6.842.542-11.386 2-16.396v-6.225zM6 0c0 8.44 1.21 13.718 4.402 22.272l.661 1.768C14.653 33.64 16 39.647 16 50c0 10.271-1.222 15.362-4.928 24.629C7.278 84.112 6 89.438 6 100h2c0-10.271 1.222-15.362 4.928-24.629C16.722 65.888 18 60.562 18 50c0-10.626-1.397-16.855-5.063-26.66l-.662-1.767C9.16 13.223 8 8.163 8 0H6z' fill='%23fff' fill-rule='nonzero' fill-opacity='.1' opacity='.349'/%3E%3C/svg%3E%0A");
+@mixin mp($size) {
+    @media only screen and (min-width: $size) {
+        @content;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:before,
+*:after {
+    box-sizing: 0;
+}
+
+html,
+body {
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: $default-font-color;
+    width: 100%;
+    min-height: 100%;
+    @include mp(768px) {
+        font-size: 22px;
+    }
+}
+
+body {
+    padding: 20px;
+    background-image: $background-image;
+}
+
+header {
+    text-align: center;
+}
+
+.section {
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+    border: 0.5px solid #d3d3d3;
+}
+
+.switch__label {
+    display: none;
+}
+
+.modal {
+    display: none;
+}

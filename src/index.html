@@ -3,24 +3,23 @@
 
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link href=" https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.7.1/jasmine.css" rel="stylesheet"/>
+    <!--<link href=" https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.7.1/jasmine.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.7.1/jasmine.min.js"></script>
-       <script src=" https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.7.1/jasmine-html.min.js"></script>
-    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.7.1/boot.min.js"></script>
-    <title>Personalized Navbar</title>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.7.1/jasmine-html.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.7.1/boot.min.js"></script> -->
+    <title>Google Keep Clone</title>
 </head>
 
 <body>
-<label class="switch__label"> change mode
-<input class="switch__input" type="checkbox" name="mode">
-<span class="switch"></span> 
-</label>
-
+    <label class="switch__label">
+      <input class="switch__input" type="checkbox" name="mode" />
+      <span class="switch"></span>
+    </label>
     <div class="modal">
         <button class="close-modal">
         <span class="material-icons"> close </span>
       </button>
-        <div class="modal-content">
+        <div class="modal-content" data-bg-color="white">
             <input class="modal-title" type="text" placeholder="Title" />
             <input class="modal-text" type="text" placeholder="Take a note" />
         </div>
@@ -30,27 +29,32 @@
         <h2 class="header-title">Keep</h2>
     </header>
     <main>
-        <div class="container">
+        <section class="newItemEntry">
             <form id="form" autocomplete="off">
-                <input class="item" id="note-title" name="title" type="text" placeholder="Take a Note." />
-                <input class="item" id="note-text" name="note" type="text" placeholder="Take a Note..." />
+                <div>
+                    <label for="note-title">Enter Title</label>
+                    <input class="item" id="note-title" name="title" autocomplete="off" tabindex="0" type="text" placeholder="Take a Note..." />
+                    <label for="note-text">Enter Item</label>
+                    <input class="item" id="note-text" name="note" autocomplete="off" tabindex="0" type="text" placeholder="Take a Note..." />
+                </div>
                 <div id="form-buttons">
-                    <button type="submit" class="add-btn">
+                    <button type="submit" class="add-btn" aria-label="add item to list">
               <span class="material-icons"> done </span>
             </button>
-                    <button type="button" id="form-close-button" class="close">
+                    <button type="button" id="form-close-button" class="close" tab-index="0" aria-label="close form">
               <span class="material-icons"> close </span>
             </button>
                 </div>
             </form>
-        </div>
-        <div id="notes" class="items"></div>
-
-        <div class="color-tooltip">
-            <div class="color-option" data-color="#3c3f43" id="gray"></div>
-            <div class="color-option" data-color="#fbbc04" id="orange"></div>
-            <div class="color-option" data-color="#90ee90" id="green"></div>
-        </div>
+        </section>
+        <section class="listContainer">
+            <div id="notes" class="items"></div>
+            <div class="color-tooltip">
+                <div class="color-option" data-color="#3c3f43" id="gray"></div>
+                <div class="color-option" data-color="#fbbc04" id="orange"></div>
+                <div class="color-option" data-color="#90ee90" id="green"></div>
+            </div>
+        </section>
     </main>
 </body>
 

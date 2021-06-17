@@ -1,7 +1,6 @@
-import './closures';
-
-import "./main.scss";
+import "./SASS/main.scss";
 import "./notes";
+/*import "./test.js";*/
 
 
 /*const navInput = document.querySelector(".name-input ");
